@@ -1,0 +1,147 @@
+/* General Area Start */
+
+@media (min-width: 1024px){
+    .container{
+        max-width: 50%;
+    }
+}
+@media (max-width: 1024px){
+    .container{
+        width: 75%;
+    }
+}
+@media (max-width: 768px){
+    .container{
+        width: 90%;
+    }
+}
+@media (max-width: 557px){
+    .container{
+        width: 100%;
+    }
+}
+.ga-maamli-font-regular {
+    font-family: "Ga Maamli", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.work-sans-font {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.alert, .true-answer, .wrong-answer{
+    display: none;
+}
+
+/* dark mode start */
+
+.dark-mode{
+    z-index: 9999;
+    cursor: pointer;
+}
+.dark-mode h6{
+    color: #fff;
+}
+.dark-mode #dark-light-icon{
+    font-size: 22pt;
+    color: #12fcc2;
+    margin-left: 0.5em;
+}
+
+/* dark mode end */
+
+main{
+    background-image: url(../images/waves.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.btn-wave{
+    background-color: rgb(8, 231, 219);
+}
+.btn-wave:hover{
+    background-color: rgba(48, 255, 234, 0.87);
+}
+.bg-wave{
+    background-color: rgb(8, 231, 219);
+}
+
+/* General Area End */
+
+/* 'Welcome to quiz app' page Start */
+.quiz-welcome-page .container{
+    background-image: linear-gradient(0deg , rgba(3, 109, 171, 0.711), #13c391);
+}
+
+@media (max-width: 700px){
+    .quiz-welcome-page .container h4{
+        font-size: 0.8rem;
+    }
+    .quiz-welcome-page .container h1{
+        font-size: 1.3rem;
+    }
+}
+
+/* 'Welcome to quiz app' page End */
+
+/* quiz questions page Start */
+
+.quiz-questions-page .container{
+    background-image: linear-gradient(0deg , rgba(3, 109, 171, 0.711), #13c391);
+}
+
+/* quiz questions page End */
+
+/* quiz finish page Start */
+
+.quiz-finish-page{
+    z-index: 9999;
+}
+.quiz-finish-page .container{
+    background-image: linear-gradient(0deg , rgba(3, 61, 94, 0.711), #0685c5);
+}
+
+/* quiz finish page End */
+
+
+
+/* spinner */
+
+.spinner{
+    height: 80px;
+    margin: 20px 0;
+}
+.loader {
+    display: block;
+    position: relative;
+    background-image:
+    linear-gradient(#00ffdd 16px, transparent 0) ,
+    linear-gradient(#00c8ff 16px, transparent 0) ,
+    linear-gradient(#00c8ff 16px, transparent 0) ,
+    linear-gradient(#00ffdd 16px, transparent 0);
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    background-position: left top , left bottom , right top , right bottom;
+    animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+    0% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(0deg)
+    }
+    50% {
+    width: 30px;
+    height: 30px;
+    transform: rotate(180deg)
+    }
+    100% {
+    width: 64px;
+    height: 64px;
+    transform: rotate(360deg)
+    }
+}

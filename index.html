@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/icons8-quizizz-64.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ga+Maamli&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <title>Quiz App</title>
+</head>
+<body class="work-sans-font">
+    
+    <div class="dark-mode position-fixed top-0 end-0 m-2 p-2 rounded-pill">
+        <h6 class="rounded-pill px-2 py-0 m-0 border-0 d-flex align-items-center">
+            <span>light</span>
+            <i id="dark-light-icon" class="fa-solid fa-toggle-off"></i>
+        </h6>
+    </div>
+
+
+    <main class="container-fluid vh-100 position-relative">
+        <!-- 'Welcome to quiz app' page Start -->
+        <section class="quiz-welcome-page d-flex justify-content-center align-items-center h-100">
+            <div class="container rounded-3 p-5">
+                <h1 class="text-white text-center text-nowrap">Welcome to <span class="ga-maamli-font-regular">Quiz app</span></h1>
+                <h4 class="text-white text-center mb-5 text-nowrap">Please Choose your quiz settings</h4>
+                <div class="form-floating my-3">
+                    <select name="category" class="form-control" id="quiz-category" placeholder="Category of questions">
+                        <option value="#" selected disabled>Category</option>
+                        <option value="9">General Knowledge</option>
+                        <option value="15">Entertainment: Video games</option>
+                        <option value="10">Entertainment: Books</option>
+                        <option value="11">Entertainment: Film</option>
+                        <option value="12">Entertainment: Music</option>
+                        <option value="18">Science: computers</option>
+                        <option value="22">Geography</option>
+                        <option value="23">History</option>
+                        <option value="21">Sports</option>
+                        <option value="21">Art</option>
+                    </select>
+                    <label for="quiz-category">Category of questions</label>
+                </div>
+                <div class="difficulty my-3">
+                    <label for="difficulty" class="text-white">Difficulty</label>
+                    <div>
+                        <input type="radio" class="form-check-input" name="difficulty" value="easy" id="difficulty-easy">
+                        <label for="difficulty-easy" class="text-white">Easy</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="difficulty" value="medium" id="difficulty-medium">
+                        <label for="difficulty-medium" class="text-white">Medium</label>
+                    </div>
+                    <div>
+                        <input type="radio" class="form-check-input" name="difficulty" value="hard" id="difficulty-hard">
+                        <label for="difficulty-hard" class="text-white">Hard</label>
+                    </div>
+                </div>
+                <div class="form-floating my-3">
+                    <input type="number" class="form-control" id="numberOfQuestions" name="number-of-questions" min="1" max="20" placeholder="How Many questions ?">
+                    <label for="numberOfQuestions">How Many questions ?</label>
+                </div>
+                <div class="all-inputs-required alert alert-danger text-danger">All inputs are required</div>
+                <div class="max-number-questions alert alert-danger text-danger">Max number of questions is 45</div>
+                <div class="d-flex justify-content-end">
+                    <button class="btn btn-wave text-white px-4">Start</button>
+                </div>
+            </div>
+        </section>
+        <!-- 'Welcome to quiz app' page End -->
+        <!-- quiz questions page Start -->
+        <section class="d-none quiz-questions-page d-flex justify-content-center align-items-center h-100">
+            <div class="container rounded-3 p-5 d-flex flex-column">
+                <h5 class="true-answer bg-success align-self-start fs-6 text-white rounded-5 px-3 py-2">Correct</h5>
+                <h5 class="wrong-answer bg-danger align-self-start fs-6 text-white rounded-5 px-3 py-2">Wrong</h5>
+                <h1 class="text-white text-center text-nowrap">Quiz</h1>
+                <div class="questionAndAnswersContainer d-flex flex-column">
+                    <div class="spinner d-flex justify-content-center align-items-center">
+                        <span class="loader"></span>
+                    </div>
+                </div>
+                <div class="alert no-answer-alert alert-danger text-danger">Please select an Answer!!</div>
+                <button class="nextBtn btn btn-wave align-self-end text-white rounded-5">Next</button>
+                <button class="d-none finishBtn btn btn-danger align-self-end text-white rounded-5">finish</button>
+            </div>
+        </section>
+        <!-- quiz questions page End -->
+        <!-- quiz finish page Start -->
+        <section class="d-none quiz-finish-page position-absolute start-0 end-0 top-0 bottom-0 bg-opacity-50 bg-dark d-flex justify-content-center align-items-center">
+            <div class="container rounded-3 p-5 d-flex flex-column">
+                <h1 class="text-white text-center">Finish</h1>
+                <div class="questionAndAnswers text-white">
+                    <h2 class="text-white">Score: <span class="setScore">10</span></h2>
+                </div>
+                <button class="tryAgainBtn btn btn-wave align-self-end text-white rounded-5">Try Again?</button>
+            </div>
+        </section>
+        <!-- quiz finish page End -->
+    </main>
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>
